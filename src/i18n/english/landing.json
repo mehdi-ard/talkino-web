@@ -1,0 +1,32 @@
+{
+  "signIn": "Sign In",
+  "tryForFree": "Try for Free",
+  "profile": "Profile",
+  "topBussiness": "Top Business App",
+  "oneApp": "One app to replace them all",
+  "getStarted": "Get Start",
+  "exploreTalkino": "Explore Talkino",
+  "testimonials": {
+    "testimonials": "Testimonials",
+    "whatPeopleSay": "What People Are Saying",
+    "description": "From setup to execution, Talkino delivers — here’s what people are saying after switching from other platforms they used before."
+  },
+  "features": {
+    "features": "Features",
+    "allNeeded": "All The Features You Need",
+    "description": "Packed with essential features — from instant meeting launch, smart screen sharing, to collaborative tools that keep your team in sync."
+  },
+  "faq": {
+    "askTalkino": "Ask Talkino",
+    "frequentlyAskedQuestions": "Frequently Asked Questions"
+  },
+  "download": {
+    "downloadFlash": "Download App Talkino",
+    "downloadTitle": "Start using our app today, enjoy the complete fun"
+  },
+  "plan": {
+    "planTitle": "Plan",
+    "planText": "Choose Your Plan",
+    "recommendedPlan": "Recommended"
+  }
+}

@@ -1,16 +1,19 @@
 import i18n from "@/i18n";
 import type { FC } from "react";
-import { FAQ, Features, Hero, Testimonials } from "./Components";
+import * as Component from "./Components";
 
 const Home: FC = () => {
   console.log(i18n.language);
 
   return (
     <div>
-      <Hero />
-      <Testimonials />
-      <Features />
-      <FAQ />
+      <Component.Hero />
+      <Component.CompanyUser/>
+      <Component.Testimonials />
+      <Component.Features />
+      <Component.FAQ />
+      <Component.Plan/>
+      <Component.Download/>
     </div>
   );
 };

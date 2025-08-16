@@ -1,26 +1,28 @@
 import type { FC } from "react";
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 
 export const Nav: FC = () => {
+  const {t}=useTranslation()
   const menuItems = [
     {
-      name: "Home",
+      name: t('layout.header.home'),
       path: "/",
     },
     {
-      name: "About",
+      name: t('layout.header.about'),
       path: "/about",
     },
     {
-      name: "Contact",
+      name: t('layout.header.contact'),
       path: "/contact",
     },
     {
-      name: "Blog",
+      name: t('layout.header.blog'),
       path: "/blog",
     },
     {
-      name: "FAQ",
+      name: t('layout.header.faq'),
       path: "/faq",
     },
   ];

@@ -4,11 +4,15 @@ import Reminder from "@/assets/image/Container.png";
 import PrivateMeeting from "@/assets/image/Join Meeting.png";
 import { IconlyStar } from "@/components";
 import Threads from "@/components/Animation/Threads";
+import { useGetFeature } from "@/core";
 import { Button, Carousel, Typography } from "antd";
 import cn from "classnames";
 import type { FC } from "react";
+import { useTranslation } from "react-i18next";
 
 export const Features: FC = () => {
+  const {t}=useTranslation()
+  const {data}= useGetFeature()
   const dataFeatures = [
     {
       title: "Chat",
@@ -40,20 +44,19 @@ export const Features: FC = () => {
           amplitude={3.5}
           distance={0.6}
           enableMouseInteraction={true}
-          // className="!absolute top-0 left-0 w-full h-full"
         />
       </div>
       <div className="w-6/12 flex flex-col justify-between py-10 px-4">
         <div>
           <div className="flex justify-center bg-[#171717] border-1 border-[#525252] px-2 py-2 rounded-lg gap-2 my-10 w-36">
             <IconlyStar color="#ffffff" />
-            <span className="text-white">Features</span>
+            <span className="text-white">{t('landing.features.features')}</span>
             <IconlyStar color="#ffffff" />
           </div>
 
           <div className="flex flex-col items-center gap-2 w-5/12">
             <Typography.Title level={1} className="!text-white">
-              All The Features You Need
+              {t('landing.features.allNeeded')}
             </Typography.Title>
           </div>
         </div>
@@ -61,13 +64,11 @@ export const Features: FC = () => {
         <div className="w-7/12 flex flex-col gap-2">
           <div>
             <span className="text-white">
-              Packed with essential features — from instant meeting launch,
-              smart screen sharing, to collaborative tools that keep your team
-              in sync.
+              {t('landing.features.description')}
             </span>
           </div>
           <div>
-            <Button size="large">See More</Button>
+            <Button size="large">{t('common.seemore')}</Button>
           </div>
         </div>
       </div>
@@ -89,7 +90,7 @@ export const Features: FC = () => {
           pauseOnHover
           verticalSwiping={true}
         >
-          {dataFeatures.map((item, index) => (
+          {data?.map((item:any, index:number) => (
             <div
               key={index}
               className={cn(

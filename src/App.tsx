@@ -14,8 +14,6 @@ function App() {
   const renderRoutes = useRoutes(router);
   const playerRefs = useRef<Player | null>(null);
 
-  console.log(i18n.language);
-
   return (
     <ConfigProvider
       prefixCls="talkino"

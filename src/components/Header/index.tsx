@@ -4,9 +4,12 @@ import type { FC } from "react";
 import { Link } from "react-router-dom";
 import GlassSurface from "../Animation/GlassSurface";
 import { Nav } from "../Nav";
+import Logo from "@/assets/image/talkino-logo.png";
+import { useTranslation } from "react-i18next";
 
 export const Header: FC = () => {
   const { accessToken } = useAuth();
+  const {t} = useTranslation()
 
   const handelGoToMeet = () => {
     window.location.href = "https://meet.talkino.app";
@@ -31,8 +34,8 @@ export const Header: FC = () => {
     >
       <div className="flex justify-between items-center h-20 px-4 rounded-t-lg w-full">
         <div>
-          <Link to="/" className="flex items-center space-x-2 !text-gray-400">
-            {/* <img src={Logo} alt="tabora" className="h-8 w-8" /> */}
+          <Link to="/" className="flex items-center space-x-2 !text-gray-400 gap-2">
+            <img src={Logo} alt="tabora" className="h-8 w-8" />
             Talkino
           </Link>
         </div>
@@ -42,15 +45,15 @@ export const Header: FC = () => {
           {!accessToken ? (
             <>
               <Button size="large" onClick={handelGoToMeet} type="text">
-                Sing In
+                {t("landing.signIn")}
               </Button>
               <Button size="large" type="primary" onClick={handelGoToMeet}>
-                Sing Up
+                {t("landing.tryForFree")}
               </Button>
             </>
           ) : (
             <Button size="large" onClick={handelGoToMeet}>
-              Profile
+              {t("landing.profile")}
             </Button>
           )}
         </div>
