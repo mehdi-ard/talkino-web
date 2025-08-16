@@ -8,10 +8,11 @@ export default defineConfig({
   plugins: [tailwindcss(), react()],
   server: {
     host: "0.0.0.0",
-    https: {
-      key: fs.readFileSync(path.resolve(__dirname, "localhost-key.pem")),
-      cert: fs.readFileSync(path.resolve(__dirname, "localhost.pem")),
-    },
+    port: 4000,
+    // https: {
+    //   key: fs.readFileSync(path.resolve(__dirname, "localhost-key.pem")),
+    //   cert: fs.readFileSync(path.resolve(__dirname, "localhost.pem")),
+    // },
     watch: {
       usePolling: true,
       interval: 1000,
