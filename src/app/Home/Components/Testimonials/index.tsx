@@ -1,5 +1,6 @@
 import { IconlyStar } from "@/components";
 import { useGetTestimonial } from "@/core";
+import i18n from "@/i18n";
 import { Button, Typography } from "antd";
 import { isEmpty } from "ramda";
 import type { FC } from "react";
@@ -80,23 +81,23 @@ export const Testimonials: FC = () => {
               <div className="flex items-center">
                 <div className="w-14 h-14 rounded-full overflow-hidden bg-amber-500 mx-3">
                   <img
-                    src={item.avatar}
+                    src={import.meta.env.VITE_APP_API_URL + item.image}
                     alt=""
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
                 <div>
                   <p className="text-black !mb-0 font-bold group-hover:text-white">
-                    {item.name}
+                    {i18n.language === "fa" ? item.name_fa : item.name_en}
                   </p>
                   <span className="text-[#0065FD] !text-sm group-hover:text-white">
-                    {item.position}
+                    {i18n.language === "fa" ? item.position_fa : item.position_en}
                   </span>
                 </div>
               </div>
               <div className="mt-10 flex items-center gap-2">
                 <span className="text-gray-400 text-sm group-hover:text-white">
-                  {item.comment}
+                  {i18n.language === "fa" ? item.content_fa : item.content_en}
                 </span>
               </div>
             </div>

@@ -4,7 +4,7 @@ import type { Plan } from "@/types/landing";
 
 export const useGetPlans = () => {
   return useQuery<Array<Plan>, Error>({
-    queryKey: ["get faq"],
+    queryKey: ["get plan"],
     queryFn: () => LandingService.getPlans(),
   });
 };

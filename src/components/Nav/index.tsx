@@ -27,17 +27,17 @@ export const Nav: FC = () => {
     },
   ];
   return (
-    <ul className="flex gap-2">
+    <ul className="flex gap-8">
       {menuItems.map((item, index) => (
         <li key={index}>
           <NavLink
             to={item?.path}
             className={({ isActive, isPending }) =>
               isPending
-                ? "!text-gray-600 hover:text-primary"
+                ? "!text-gray-400 hover:text-primary"
                 : isActive
-                ? "!text-gray-300"
-                : "!text-gray-400 hover:!text-gray-300 transition-all "
+                ? "!text-gray-500 border-b border-b-neutral-500 py-2"
+                : "!text-gray-800 hover:!text-gray-300 transition-all py-2"
             }
           >
             {item.name}

@@ -1,11 +1,13 @@
+import type { S } from "node_modules/framer-motion/dist/types.d-Cjd591yU";
+
 export interface Plan {
   id: number;
   title_fa: string;
   title_en: string;
   content_fa: string;
   content_en: string;
-  price_fa: number;
-  price_en: number;
+  price_fa: string;
+  price_en: string;
   isRecommended: boolean;
 }
 
@@ -28,7 +30,9 @@ export interface Feature {
 export interface Testimonial {
   title_fa: string;
   content_fa: string;
+  position_fa: string;
   title_en: string;
   content_en: string;
+  position_en: string;
   image: string;
 }

@@ -2,7 +2,7 @@ import HttpService from "@/service";
 
 class LandingServiceProvider extends HttpService {
   constructor() {
-    super({ suffix: "" });
+    super({ suffix: "web" });
   }
   public getTestimonial(): any {
     return this.httpService.get(`testimonial`);
@@ -17,7 +17,7 @@ class LandingServiceProvider extends HttpService {
   }
 
   public getPlans(): any {
-    return this.httpService.get(`plans`);
+    return this.httpService.get(`plan`);
   }
 }
 
