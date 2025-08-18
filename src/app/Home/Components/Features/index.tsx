@@ -105,7 +105,7 @@ export const Features: FC = () => {
 
               <div className="translate-y-4/12 w-8/12 h-full">
                 <img
-                  src={import.meta.env.VITE_APP_API_URL + item.image}
+                  src={import.meta.env.VITE_APP_API_URL + "/" + item.image}
                   alt={i18n.language === "fa" ? item.title_fa : item.title_en}
                   className="w-full h-full object-cover object-top-left"
                 />

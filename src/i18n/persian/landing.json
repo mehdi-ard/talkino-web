@@ -1,0 +1,32 @@
+{
+  "signIn": "ورود",
+  "tryForFree": "امتحان رایگان",
+  "profile": "پروفایل",
+  "topBussiness": "برترین اپلیکیشن کسب‌وکار",
+  "oneApp": "یک اپ برای جایگزینی همه",
+  "getStarted": "شروع کنید",
+  "exploreTalkino": "کاوش در Talkino",
+  "testimonials": {
+    "testimonials": "نظرات کاربران",
+    "whatPeopleSay": "کاربران چه می‌گویند",
+    "description": "از راه‌اندازی تا اجرا، Talkino بهترین عملکرد را دارد — این‌ها نظرات کاربرانی است که از پلتفرم‌های دیگر به ما مهاجرت کرده‌اند."
+  },
+  "features": {
+    "features": "ویژگی‌ها",
+    "allNeeded": "تمام ویژگی‌های مورد نیاز شما",
+    "description": "مجهز به امکانات ضروری — از شروع فوری جلسه، اشتراک‌گذاری هوشمند صفحه، تا ابزارهای همکاری که تیم شما را هماهنگ نگه می‌دارد."
+  },
+  "faq": {
+    "askTalkino": "از Talkino بپرسید",
+    "frequentlyAskedQuestions": "سؤالات متداول"
+  },
+  "download": {
+    "downloadFlash": "دانلود اپلیکیشن Talkino",
+    "downloadTitle": "امروز اپ ما را استفاده کنید و لذت کامل را ببرید"
+  },
+  "plan": {
+    "planTitle": "پلن",
+    "planText": "پلن خود را انتخاب کنید",
+    "recommendedPlan": "پیشنهادی"
+  }
+}

@@ -28,6 +28,7 @@ export const Hero: FC = () => {
             animateBy="words"
             direction="top"
             className="!text-6xl text-center font-bold"
+            
           />
           <Typography.Text className="!text-3xl font-bold mt-10 text-center">
             {t("landing.oneApp")}

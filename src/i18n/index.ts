@@ -46,7 +46,7 @@ i18n
   .then(() => {
     //@ts-ignore
     document.querySelector("html").setAttribute("lang", i18n.language);
-
+   
     return this;
   });
 

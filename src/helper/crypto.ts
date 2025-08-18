@@ -1,31 +1,36 @@
-import * as CryptoJS from 'crypto-js';
-import AES from 'crypto-js/aes';
-import encBase64 from 'crypto-js/enc-base64';
-import encUtf8 from 'crypto-js/enc-utf8';
+import * as CryptoJS from "crypto-js";
+import AES from "crypto-js/aes";
+import encBase64 from "crypto-js/enc-base64";
+import encUtf8 from "crypto-js/enc-utf8";
 
 export class Crypto {
-    private readonly key = import.meta.env.VITE_APP_KEY;  // 16 chars
+  private readonly key = import.meta.env.VITE_APP_KEY; // 16 chars
 
-    encrypt(plainText: string): string {
-        if (typeof plainText !== 'string') {
-            throw new Error('plainText must be a string');
-        }
-
-        const keyParsed = encUtf8.parse(this.key);
-        const iv = encBase64.parse(this.key);
-
-        return AES.encrypt(plainText, keyParsed, { iv }).toString();
+  encrypt(plainText: string): string {
+    if (typeof plainText !== "string") {
+      throw new Error("plainText must be a string");
     }
 
+    const keyParsed = encUtf8.parse(this.key);
+    const iv = encBase64.parse(this.key);
 
-    decrypt(encryptedHex: string): string {
-        const keyParsed = encUtf8.parse(this.key);
-        const iv = encBase64.parse(this.key);
+    return import.meta.env.PROD
+      ? AES.encrypt(plainText, keyParsed, { iv }).toString()
+      : plainText;
+  }
+
+  decrypt(encryptedHex: string): string {
+    const keyParsed = encUtf8.parse(this.key);
+    const iv = encBase64.parse(this.key);
+    const decrypted: CryptoJS.lib.WordArray = AES.decrypt(
         //@ts-ignore
-        const decrypted: CryptoJS.lib.WordArray = AES.decrypt({ ciphertext: encBase64.parse(encryptedHex) }, keyParsed, {
-            iv,
-        });
+      { ciphertext: encBase64.parse(encryptedHex) },
+      keyParsed,
+      {
+        iv,
+      }
+    );
 
-        return encUtf8.stringify(decrypted);
-    }
+    return import.meta.env.PROD ? encUtf8.stringify(decrypted) : encryptedHex;
+  }
 }

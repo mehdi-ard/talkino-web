@@ -36,3 +36,11 @@ export interface Testimonial {
   position_en: string;
   image: string;
 }
+
+
+export interface Download {
+  id: number;
+  title: string;
+  icon: string;
+  link: string;
+}

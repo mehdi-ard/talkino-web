@@ -7,7 +7,7 @@ class PagesServiceProvider extends HttpService {
     }
 
     public getPage(slug: string): any {
-        return this.httpService.get(slug);
+        return this.httpService.get(`slug/${slug}`);
     }
 
 }

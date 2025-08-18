@@ -1,3 +1,4 @@
+import i18n from "@/i18n";
 import { motion, type Transition } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 
@@ -47,6 +48,8 @@ export const BlurText: React.FC<BlurTextProps> = ({
   stepDuration = 0.35,
 }) => {
   const elements = animateBy === "words" ? text.split(" ") : text.split("");
+  console.log(elements);
+  
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLParagraphElement>(null);
 
@@ -95,7 +98,7 @@ export const BlurText: React.FC<BlurTextProps> = ({
   );
 
   return (
-    <p ref={ref} className={`blur-text ${className} flex flex-wrap`}>
+    <p ref={ref} className={`blur-text ${className} flex`} dir='ltr'>
       {elements.map((segment, index) => {
         const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
 
@@ -112,6 +115,7 @@ export const BlurText: React.FC<BlurTextProps> = ({
             initial={fromSnapshot}
             animate={inView ? animateKeyframes : fromSnapshot}
             transition={spanTransition}
+            dir="ltr"
             onAnimationComplete={
               index === elements.length - 1 ? onAnimationComplete : undefined
             }
@@ -123,6 +127,7 @@ export const BlurText: React.FC<BlurTextProps> = ({
             {segment === " " ? "\u00A0" : segment}
             {animateBy === "words" && index < elements.length - 1 && "\u00A0"}
           </motion.span>
+          
         );
       })}
     </p>

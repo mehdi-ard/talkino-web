@@ -3,8 +3,6 @@ import type { FC } from "react";
 import * as Component from "./Components";
 
 const Home: FC = () => {
-  console.log(i18n.language);
-
   return (
     <div>
       <Component.Hero />

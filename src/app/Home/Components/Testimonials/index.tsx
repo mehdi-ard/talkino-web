@@ -81,7 +81,7 @@ export const Testimonials: FC = () => {
               <div className="flex items-center">
                 <div className="w-14 h-14 rounded-full overflow-hidden bg-amber-500 mx-3">
                   <img
-                    src={import.meta.env.VITE_APP_API_URL + item.image}
+                    src={import.meta.env.VITE_APP_API_URL + "/" + item.image}
                     alt=""
                     className="w-full h-full object-cover object-center"
                   />

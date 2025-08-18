@@ -27,7 +27,7 @@ export const Nav: FC = () => {
     },
   ];
   return (
-    <ul className="flex gap-8">
+    <ul className="flex gap-8 w-full justify-center">
       {menuItems.map((item, index) => (
         <li key={index}>
           <NavLink

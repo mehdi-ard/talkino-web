@@ -52,7 +52,7 @@ export const Plan: FC = () => {
                 </span>
 
                 <div
-                  className="flex justify-center items-center gap-2"
+                  className="flex justify-center items-center gap-2 !text-centers"
                   dangerouslySetInnerHTML={{
                     __html:
                       i18n.language === "fa"
@@ -61,7 +61,7 @@ export const Plan: FC = () => {
                   }}
                 />
 
-                <span className="text-4xl font-bold flex items-center gap-2">
+                <span className="text-3xl font-bold flex items-center gap-2">
                   {item.price_en !== "Free" && (
                     <span className="-mx-1.5">
                       {i18n.language === "fa" ? (
@@ -80,7 +80,7 @@ export const Plan: FC = () => {
                   )}
                 </span>
 
-                <Button>Get Started</Button>
+                <Button>{t('common.getStarted')}</Button>
               </div>
             </div>
           ))}

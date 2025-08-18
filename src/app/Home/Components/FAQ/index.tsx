@@ -33,7 +33,7 @@ export const FAQ: FC = () => {
     !isEmpty(data) && (
       <div className="py-20 relative">
         <div className="flex flex-col justify-center items-center gap-2 w-5/12 m-auto mb-20 relative z-10">
-          <div className="flex justify-center bg-] px-2 py-2 rounded-lg gap-2 mt-8 bg-[#FDFDFD] border-1 border-[#E9E9E9] my-8 w-44">
+          <div className="flex justify-center bg-] px-2 py-2 rounded-lg gap-2 mt-8 bg-[#FDFDFD] border-1 border-[#E9E9E9] my-8">
             <IconlyStar color="#0065FD" />
             <span className="text-[#0065FD]">
               {t("landing.faq.askTalkino")}
