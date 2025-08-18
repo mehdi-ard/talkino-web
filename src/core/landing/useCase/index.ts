@@ -3,3 +3,4 @@ export * from "./useGetFeature";
 export * from "./useGetFAQ";
 export * from "./useGetPlans"
 export * from './useGetDownload'
+export * from './useGetSocial'

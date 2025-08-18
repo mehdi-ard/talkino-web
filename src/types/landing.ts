@@ -44,3 +44,12 @@ export interface Download {
   icon: string;
   link: string;
 }
+
+export interface Social {
+  id: number;
+  socialMedia: string;
+  link: string;
+  iconDark: string;
+  iconLight: string;
+  isActive:boolean
+}

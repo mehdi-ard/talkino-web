@@ -23,6 +23,10 @@ class LandingServiceProvider extends HttpService {
   public getDownload(): any {
     return this.httpService.get(`download`);
   }
+
+  public getSocial(): any {
+    return this.httpService.get(`social`);
+  }
 }
 
 export const LandingService = new LandingServiceProvider();
