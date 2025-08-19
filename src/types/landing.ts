@@ -1,4 +1,3 @@
-import type { S } from "node_modules/framer-motion/dist/types.d-Cjd591yU";
 
 export interface Plan {
   id: number;
@@ -43,13 +42,4 @@ export interface Download {
   title: string;
   icon: string;
   link: string;
-}
-
-export interface Social {
-  id: number;
-  socialMedia: string;
-  link: string;
-  iconDark: string;
-  iconLight: string;
-  isActive:boolean
 }

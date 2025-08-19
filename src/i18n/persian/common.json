@@ -1,6 +1,7 @@
 {
   "seemore": "بیشتر ببین",
   "perMonth": " ماه",
-      "getStarted":"شروع کنید"
-
+  "getStarted": "شروع کنید",
+  "readTime": "{{time}} دقیقه مطالعه",
+  "readMore": "بیشتر بخوانید"
 }

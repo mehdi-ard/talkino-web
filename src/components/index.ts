@@ -6,3 +6,4 @@ export * from "./HeadPage";
 export * from "./icon";
 export * from "./Nav";
 export * from "./Container";
+export * from './LottieAnimation'

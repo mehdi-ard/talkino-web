@@ -1,5 +1,7 @@
 {
     "seemore":"See More",
     "perMonth":" month",
-    "getStarted":"Get Started"
+    "getStarted":"Get Started",
+    "readTime":"{{time}} minute read",
+    "readMore":"Read More"
 }

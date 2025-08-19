@@ -1,0 +1,13 @@
+{
+  "contactInfo": "Contact Information",
+  "saySomething": "Please check <link>FAQ</link> before sending an email or making a phone call.",
+  "faq": "Frequently Asked Questions",
+  "subject": "Subject",
+  "fullname": "Full Name",
+  "email": "Email",
+  "phoneNumber": "Phone Number",
+  "message": "Message",
+  "submit": "Submit",
+  "unValidEmail": "Please check your email",
+  "emptyEmailContact": "Please enter your email"
+}
