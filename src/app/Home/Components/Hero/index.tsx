@@ -27,7 +27,7 @@ export const Hero: FC = () => {
             delay={200}
             animateBy="words"
             direction="top"
-            className="sm:!text-6xl !text-4xl text-center font-bold "
+            className="sm:!text-6xl !text-3xl text-center font-bold "
             
           />
           <Typography.Text className="sm:!text-3xl !text-xl font-bold sm:mt-10 mt-5 text-center">
@@ -51,12 +51,12 @@ export const Hero: FC = () => {
               type: "keyframes",
               bounce: 0.5,
             }}
-            className="drop-shadow-lg animate-none"
+            className="drop-shadow-lg animate-none sm:w-4/4 w-2/4"
           >
-            <img src={img1} alt="" className="sm:w-4/4 w-2/4" />
+            <img src={img1} alt="" className="w-full" />
           </motion.div>
         </div>
-        <div className="absolute sm:top-3/12 sm:right-0 top-5/12 -right-10 m-auto z-0">
+        <div className="absolute sm:top-3/12 sm:right-0 top-5/12 right-10 m-auto z-0">
           <motion.div
             initial={{ y: 30, x: 30 }}
             animate={{ y: 0, x: 0 }}
@@ -66,12 +66,12 @@ export const Hero: FC = () => {
               type: "keyframes",
               bounce: 1,
             }}
-            className="drop-shadow-lg animate-none"
+            className="drop-shadow-lg animate-none sm:w-4/4 w-2/4"
           >
-            <img src={img2} alt="" className="sm:w-4/4 w-2/4"/>
+            <img src={img2} alt="" className="w-full"/>
           </motion.div>
         </div>
-        <div className="absolute sm:top-4/12 top-5/12 left-0 z-0">
+        <div className="absolute sm:top-4/12 top-5/12 left-0 z-0 flex justify-center items-center">
           <motion.div
             initial={{ y: 30, x: 10 }}
             animate={{ y: 0, x: 10 }}
@@ -81,14 +81,14 @@ export const Hero: FC = () => {
               type: "keyframes",
               bounce: 1,
             }}
-            className="drop-shadow-lg animate-none"
+            className="drop-shadow-lg animate-none sm:w-4/4 w-2/4"
           >
-            <img src={img3} alt="" className="sm:w-4/4 w-2/4"/>
+            <img src={img3} alt="" className="w-full"/>
           </motion.div>
         </div>
       </div>
 
-      <div className="sm:w-8/12 m-auto">
+      <div className="sm:w-8/12 m-auto w-8/12">
         <div className="mt-10">
           <img src={MockUp} alt="" className="w-full" />
         </div>

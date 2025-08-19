@@ -38,7 +38,7 @@ function App() {
         },
       }}
     >
-      <div className="bg-[#F3F4F6] min-h-screen flex flex-col justify-between overflow-x-hidden">
+      <div className="bg-[#F3F4F6] min-h-screen flex flex-col justify-between">
         <Header />
         <Content>
           <Suspense fallback={<Spin fullscreen />}>{renderRoutes}</Suspense>

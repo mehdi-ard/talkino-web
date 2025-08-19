@@ -30,7 +30,7 @@ const Pricing: FC = () => {
         <Typography.Text>{t("pages.pricingText")}</Typography.Text>
       </div>
 
-        <div className="flex sm:justify-center items-stretch gap-4 m-auto relative z-10 sm:overflow-visible overflow-x-auto scrollbar-hide smooth-scroll">
+        <div className="flex sm:justify-center items-stretch gap-4 m-auto relative z-10 sm:overflow-visible overflow-x-auto overflow-y-hidden scrollbar-hide smooth-scroll">
         {data?.map((item: Plan) => (
             <PriceCard key={item.id} data={{
                 title: i18n.language === "fa" ? item.title_fa : item.title_en,

@@ -44,21 +44,21 @@ export const Features: FC = () => {
         <Threads amplitude={3.5} distance={0.6} enableMouseInteraction={true} />
       </div>
       <div className="sm:w-6/12 w-full flex flex-col justify-between py-10 px-4">
-        <div className="w-full flex flex-col justify-center items-center">
+        <div className="w-full flex flex-col sm:justify-center items-center sm:items-start">
           <div className="flex justify-center bg-[#171717] border-1 border-[#525252] px-2 py-2 rounded-lg gap-2 my-10 w-36">
             <IconlyStar color="#ffffff" />
             <span className="text-white">{t("landing.features.features")}</span>
             <IconlyStar color="#ffffff" />
           </div>
 
-          <div className="flex flex-col items-center gap-2 sm:w-5/12 w-full text-center">
+          <div className="flex flex-col sm:items-start items-center gap-2 sm:w-5/12 w-full">
             <Typography.Title level={1} className="!text-white">
               {t("landing.features.allNeeded")}
             </Typography.Title>
           </div>
         </div>
 
-        <div className="sm:w-7/12 flex flex-col sm:items-end items-center gap-2">
+        <div className="sm:w-7/12 flex flex-col sm:items-start items-center gap-2">
           <div>
             <span className="text-white text-center">
               {t("landing.features.description")}

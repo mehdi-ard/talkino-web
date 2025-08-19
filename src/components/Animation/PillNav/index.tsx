@@ -260,9 +260,9 @@ const PillNav: React.FC<PillNavProps> = ({
   } as React.CSSProperties;
 
   return (
-    <div className="absolute m-auto top-0 h-10 bottom-0 z-[1000] w-full left-0 md:w-auto md:left-auto">
+    <div className="absolute m-auto top-0 h-10 bottom-0 z-[100] w-full left-0 md:w-auto md:left-auto">
       <nav
-        className={`w-full md:w-max flex items-center justify-between md:justify-start box-border px-4 md:px-0 ${className}`}
+        className={`w-10 md:w-max flex items-center justify-between md:justify-start box-border px-4 md:px-0 ${className}`}
         aria-label="Primary"
         style={cssVars}
       >
@@ -421,7 +421,7 @@ const PillNav: React.FC<PillNavProps> = ({
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
           aria-expanded={isMobileMenuOpen}
-          className="md:hidden rounded-full border-0 flex flex-col items-center justify-center gap-1 cursor-pointer p-0 relative"
+          className="md:hidden rounded-full border-0 flex flex-col items-center justify-center gap-1 cursor-pointer p-0 relative w-10 h-10 flex-shrink-0"
           style={{
             width: "var(--nav-h)",
             height: "var(--nav-h)",
@@ -441,7 +441,7 @@ const PillNav: React.FC<PillNavProps> = ({
 
       <div
         ref={mobileMenuRef}
-        className="md:hidden absolute top-[3em] left-4 right-4 rounded-[27px] shadow-[0_8px_32px_rgba(0,0,0,0.12)] z-[998] origin-top"
+        className="md:hidden absolute top-[3em] left-4 right-4 rounded-[27px] shadow-[0_8px_32px_rgba(0,0,0,0.12)] z-[99] origin-top"
         style={{
           ...cssVars,
           background: "var(--base, #f0f0f0)",

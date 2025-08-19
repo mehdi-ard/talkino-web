@@ -17,7 +17,7 @@ const Blog: FC = () => {
     },[])
 
   return (
-    <div className="p-20 flex flex-wrap gap-2">
+    <div className="sm:p-20 p-5 flex flex-wrap gap-2">
       {isEmpty(data) ? (
         <div className="w-full h-screen flex justify-center items-center">
           <Empty />
@@ -25,7 +25,7 @@ const Blog: FC = () => {
       ) : (
         data?.map((item: Post) => (
           <div
-            className="w-4/12 rounded-lg p-2 flex flex-col gap-2 group"
+            className="sm:w-4/12 w-full rounded-lg p-2 flex flex-col gap-2 group"
             key={item.id}
           >
             <div className="h-80 w-full bg-gradient-to-r from-neutral-500 to-neutral-400 rounded-lg overflow-hidden">
@@ -58,8 +58,8 @@ const Blog: FC = () => {
                   dangerouslySetInnerHTML={{
                     __html:
                       i18n.language === "fa"
-                        ? item.content_fa.slice(0, 200) + "..."
-                        : item.content_en.slice(0, 200) + "...",
+                        ? item.content_fa.slice(0, 170) + "..."
+                        : item.content_en.slice(0, 170) + "...",
                   }}
                   className="font-vazirmant h-20 py-2"
                 />

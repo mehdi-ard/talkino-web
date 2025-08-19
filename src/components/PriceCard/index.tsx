@@ -58,7 +58,7 @@ export const PriceCard: FC<PriceCardProps> = (props) => {
         dangerouslySetInnerHTML={{
           __html: data.content,
         }}
-        className="!text-neutral-500 font-medium leading-10 relative z-10 h-80"
+        className="!text-neutral-500 font-medium leading-10 relative z-10 h-96"
       />
     </div>
   );

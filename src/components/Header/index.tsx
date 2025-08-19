@@ -25,10 +25,22 @@ export const Header: FC = () => {
     {
       value: "en",
       label: "English 🇺🇸",
+      flag:"🇺🇸"
     },
     {
       value: "fa",
       label: "فارسی 🇮🇷",
+      flag:'🇮🇷'
+    },
+  ];
+    const mobileLangList = [
+    {
+      value: "en",
+      label:"🇺🇸"
+    },
+    {
+      value: "fa",
+      label:'🇮🇷'
     },
   ];
 
@@ -53,22 +65,31 @@ export const Header: FC = () => {
       brightness={70}
       // opacity={0.8}
       mixBlendMode="color"
-      className="w-full sticky top-0 z-20 shadow-none"
+      className="w-full !sticky top-0 z-20 shadow-none"
     >
-      <div className="flex justify-between items-center sm:h-20 px-4 rounded-t-lg w-full">
-        <div className="w-4/12 h-full flex items-center">
+      <div className="flex justify-between items-center sm:h-20 px-4 rounded-t-lg w-full sm:flex-row flex-row-reverse">
+        <div className="sm:w-4/12 h-full flex items-center relative z-[200]">
+         <Select
+            className="sm:!hidden !block"
+            variant="borderless"
+            options={mobileLangList}
+            optionLabelProp="label"
+            onSelect={handleLangChange}
+            value={lang}
+          />
           <Link
             to="/"
             className="flex items-center space-x-2 !text-gray-400 gap-2"
           >
-            <img src={Logo} alt="tabora" className="h-8 w-8" />
-           <span className="sm:visible hidden">Talkino</span>
+            <img src={Logo} alt="tabora" className="h-8 w-8 flex-shrink-0" />
+           <span className="sm:flex hidden">Talkino</span>
           </Link>
+         
         </div>
 
         <Nav />
 
-        <div className="flex h-full items-center sm:gap-2 sm:w-4/12">
+        <div className="sm:flex h-full items-center sm:gap-2 sm:w-4/12 hidden">
           <Select
             className="w-28"
             variant="borderless"

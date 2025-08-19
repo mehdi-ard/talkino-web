@@ -6,7 +6,6 @@ import { useLocation } from "react-router-dom";
 export const Nav: FC = () => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
-  console.log(location);
 
   const menuItems = [
     {
@@ -54,7 +53,7 @@ export const Nav: FC = () => {
     //   ))}
     // </ul>
 
-    <div className="flex gap-8 sm:w-full w-0.5 justify-center">
+    <div className="flex gap-8 sm:w-full w-0.5 justify-center c">
       <PillNav
         logoAlt="Company Logo"
         initialLoadAnimation={false}
@@ -62,10 +61,11 @@ export const Nav: FC = () => {
         activeHref={pathname}
         className="custom-nav"
         ease="power2.easeOut"
-        baseColor="#fff"
-        pillColor="#000"
-        hoveredPillTextColor="#ffffff"
+        baseColor="#00b8db"
+        pillColor="#000000"
+        hoveredPillTextColor="#fff"
         pillTextColor="#000000"
+        
       />
     </div>
   );
