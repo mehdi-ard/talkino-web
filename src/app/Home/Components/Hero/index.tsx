@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 export const Hero: FC = () => {
   const { t } = useTranslation();
   return (
-    <section className="flex justify-center items-center flex-wrap relative p-4">
+    <section className="flex flex-col sm:flex-row justify-center items-center flex-wrap relative p-4">
       <div className="w-full flex justify-center items-center flex-col">
         <div className="flex justify-center px-2 py-2 rounded-lg gap-2 mt-10 bg-[#FDFDFD] border-1 border-[#E9E9E9]">
         <IconlyFlash color="#0065FD" />
@@ -19,18 +19,18 @@ export const Hero: FC = () => {
       </div>
       </div>
 
-     <div className="flex gap-3">
-       <div className="w-7/12 relative"> 
+     <div className="flex gap-3 flex-col sm:flex-row">
+       <div className="sm:w-7/12 w-full relative"> 
         <div className="mt-20 flex flex-col items-center gap-2 ">
           <BlurText
             text="Meet. Talk. Chat. Down."
             delay={200}
             animateBy="words"
             direction="top"
-            className="!text-6xl text-center font-bold"
+            className="sm:!text-6xl !text-4xl text-center font-bold "
             
           />
-          <Typography.Text className="!text-3xl font-bold mt-10 text-center">
+          <Typography.Text className="sm:!text-3xl !text-xl font-bold sm:mt-10 mt-5 text-center">
             {t("landing.oneApp")}
           </Typography.Text>
         </div>
@@ -41,7 +41,7 @@ export const Hero: FC = () => {
         </div>
 
 
-         <div className="absolute top-7/12 right-2/12 z-0">
+         <div className="absolute sm:top-7/12 sm:right-3/12 top-8/12 right-1/12 z-0">
           <motion.div
             initial={{ y: -30, x: -10 }}
             animate={{ y: 0, x: 10 }}
@@ -53,10 +53,10 @@ export const Hero: FC = () => {
             }}
             className="drop-shadow-lg animate-none"
           >
-            <img src={img1} alt="" />
+            <img src={img1} alt="" className="sm:w-4/4 w-2/4" />
           </motion.div>
         </div>
-        <div className="absolute top-3/12 right-1/12 m-auto z-0">
+        <div className="absolute sm:top-3/12 sm:right-0 top-5/12 -right-10 m-auto z-0">
           <motion.div
             initial={{ y: 30, x: 30 }}
             animate={{ y: 0, x: 0 }}
@@ -68,10 +68,10 @@ export const Hero: FC = () => {
             }}
             className="drop-shadow-lg animate-none"
           >
-            <img src={img2} alt="" />
+            <img src={img2} alt="" className="sm:w-4/4 w-2/4"/>
           </motion.div>
         </div>
-        <div className="absolute top-6/12 left-0 z-0">
+        <div className="absolute sm:top-4/12 top-5/12 left-0 z-0">
           <motion.div
             initial={{ y: 30, x: 10 }}
             animate={{ y: 0, x: 10 }}
@@ -83,17 +83,15 @@ export const Hero: FC = () => {
             }}
             className="drop-shadow-lg animate-none"
           >
-            <img src={img3} alt="" />
+            <img src={img3} alt="" className="sm:w-4/4 w-2/4"/>
           </motion.div>
         </div>
       </div>
 
-      <div>
+      <div className="sm:w-8/12 m-auto">
         <div className="mt-10">
           <img src={MockUp} alt="" className="w-full" />
         </div>
-
-       
       </div>
      </div>
     </section>

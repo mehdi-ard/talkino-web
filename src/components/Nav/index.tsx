@@ -54,7 +54,7 @@ export const Nav: FC = () => {
     //   ))}
     // </ul>
 
-    <div className="flex gap-8 w-full justify-center">
+    <div className="flex gap-8 sm:w-full w-0.5 justify-center">
       <PillNav
         logoAlt="Company Logo"
         initialLoadAnimation={false}
@@ -62,8 +62,8 @@ export const Nav: FC = () => {
         activeHref={pathname}
         className="custom-nav"
         ease="power2.easeOut"
-        baseColor="#000000"
-        pillColor="#ffffff"
+        baseColor="#fff"
+        pillColor="#000"
         hoveredPillTextColor="#ffffff"
         pillTextColor="#000000"
       />

@@ -38,7 +38,7 @@ const Contact: FC = () => {
   return (
     <div className="p-10 h-full flex w-full flex-wrap">
       <div className="w-full h-full flex flex-col justify-between py-10 relative bg-neutral-500 mb-20">
-        <div className="w-full flex flex-col justify-center items-center z-10 relative py-10">
+        <div className="w-full flex flex-col justify-center items-center z-10 relative py-10 sm:backdrop-blur-none backdrop-blur-lg">
           <Typography.Title level={3} className="!text-neutral-50">
             {t("contact.contactInfo")}
           </Typography.Title>
@@ -63,7 +63,7 @@ const Contact: FC = () => {
       <div className="flex items-center justify-center w-full h-full">
         <Form form={form} layout="vertical" onFinish={handelSubmit}>
           <Row gutter={[16, 16]}>
-            <Col md={12}>
+            <Col md={12} sm={24} xs={24}>
               <Form.Item
                 name="subject"
                 label={t("contact.subject")}
@@ -76,7 +76,7 @@ const Contact: FC = () => {
                 <Input size="large" />
               </Form.Item>
             </Col>
-            <Col md={12}>
+            <Col md={12} sm={24} xs={24}>
               <Form.Item
                 name="fullname"
                 label={t("contact.fullname")}
@@ -89,7 +89,7 @@ const Contact: FC = () => {
                 <Input size="large" />
               </Form.Item>
             </Col>
-            <Col md={12}>
+            <Col md={12} sm={24} xs={24}>
               <Form.Item
                 name="email"
                 label={t("contact.email")}
@@ -106,13 +106,13 @@ const Contact: FC = () => {
                 <Input size="large" />
               </Form.Item>
             </Col>
-            <Col md={12}>
+            <Col md={12} sm={24} xs={24}>
               <Form.Item name="phoneNumber" label={t("contact.phoneNumber")}>
                 <Input size="large" />
               </Form.Item>
             </Col>
 
-            <Col md={24}>
+            <Col md={24} sm={24} xs={24}>
               <Form.Item
                 name="message"
                 label={t("contact.message")}
@@ -134,7 +134,7 @@ const Contact: FC = () => {
                 <Input.TextArea autoSize={{ minRows: 4, maxRows: 8 }} />
               </Form.Item>
             </Col>
-            <Col md={4}>
+            <Col md={4} sm={24} xs={24}>
               <Button htmlType="submit" block size="large">
                 {t("contact.submit")}
               </Button>
@@ -143,9 +143,9 @@ const Contact: FC = () => {
         </Form>
       </div>
 
-      <div className="flex items-center justify-center gap-3 w-full mt-20">
+      <div className="flex flex-col sm:flex-col items-center justify-center gap-3 w-full mt-20">
         <div
-          className="flex flex-col items-center justify-center gap-2 bg-neutral-200 w-4/12 h-40 rounded-lg"
+          className="flex flex-col items-center justify-center gap-2 bg-neutral-200 sm:w-4/12 w-full h-40 rounded-lg"
           onMouseEnter={() => playerMailRef.current?.play()}
           onMouseLeave={() => playerMailRef.current?.stop()}
         >
@@ -166,7 +166,7 @@ const Contact: FC = () => {
         </div>
 
         <div
-          className="flex flex-col items-center justify-center gap-2 bg-neutral-200 w-4/12 h-40 rounded-lg"
+          className="flex flex-col items-center justify-center gap-2 bg-neutral-200 sm:w-4/12 w-full h-40 rounded-lg"
           onMouseEnter={() => playerPhoneRef.current?.play()}
           onMouseLeave={() => playerPhoneRef.current?.stop()}
         >
@@ -187,7 +187,7 @@ const Contact: FC = () => {
         </div>
 
         <div
-          className="flex flex-col items-center justify-center gap-2 bg-neutral-200 w-4/12 h-40 rounded-lg"
+          className="flex flex-col items-center justify-center gap-2 bg-neutral-200 sm:w-4/12 w-full h-40 rounded-lg"
         >
         {
             data?.map((item: Social) => (

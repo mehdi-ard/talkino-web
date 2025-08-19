@@ -17,7 +17,7 @@ const Pricing: FC = () => {
   return (
     <div className="w-10/12 m-auto mt-20">
       <div className="mb-20 flex justify-center">
-        <Typography.Title level={2}>
+        <Typography.Title level={2} className="!text-center">
           <Trans
             i18nKey="pages.pricingTitle"
             components={{
@@ -30,7 +30,7 @@ const Pricing: FC = () => {
         <Typography.Text>{t("pages.pricingText")}</Typography.Text>
       </div>
 
-      <div className="flex gap-2 justify-center">
+        <div className="flex sm:justify-center items-stretch gap-4 m-auto relative z-10 sm:overflow-visible overflow-x-auto scrollbar-hide smooth-scroll">
         {data?.map((item: Plan) => (
             <PriceCard key={item.id} data={{
                 title: i18n.language === "fa" ? item.title_fa : item.title_en,

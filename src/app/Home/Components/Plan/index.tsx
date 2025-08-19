@@ -14,8 +14,8 @@ export const Plan: FC = () => {
 
   return (
     !isEmpty(data) && (
-      <div className="py-20 relative">
-        <div className="flex flex-col justify-center items-center gap-2 w-5/12 m-auto mb-20 relative z-10">
+      <div className="py-20 relative sm:px-0 px-10">
+        <div className="flex flex-col justify-center items-center gap-2 sm:w-5/12 w-full m-auto mb-20 relative z-10">
           <div className="flex justify-center bg-] px-2 py-2 rounded-lg gap-2 mt-8 bg-[#FDFDFD] border-1 border-[#E9E9E9] my-8 w-44">
             <IconlyStar color="#0065FD" />
             <span className="text-[#0065FD]">
@@ -31,7 +31,7 @@ export const Plan: FC = () => {
           </div>
         </div>
 
-        <div className=" flex justify-center items-end gap-4 m-auto relative z-10">
+        <div className="flex sm:justify-center items-end gap-4 m-auto relative z-10 sm:overflow-visible overflow-x-auto scrollbar-hide smooth-scroll">
           {data?.map((item: PlanType) => (
             <PriceCard key={item.id} data={{
                 title: i18n.language === "fa" ? item.title_fa : item.title_en,

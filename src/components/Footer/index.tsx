@@ -9,7 +9,7 @@ export const Footer: FC = () => {
   const { data } = useGetSocial();
 
   return (
-    <footer className="px-20 bg-[#2B2B2B] py-3">
+    <footer className="sm:px-20 px-16 bg-[#2B2B2B] py-3">
       <div className="flex justify-between">
         <div>
           <span className="text-neutral-500 text-sm">
@@ -40,7 +40,7 @@ export const Footer: FC = () => {
         </div>
       </div>
 
-      <div className="w-6/12 mt-10 pb-10">
+      <div className="sm:w-6/12 w-full mt-10 pb-10">
         <span className="text-neutral-500 text-sm">
           {t("layout.footer.copyrightContent")}
         </span>

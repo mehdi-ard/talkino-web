@@ -425,16 +425,16 @@ const PillNav: React.FC<PillNavProps> = ({
           style={{
             width: "var(--nav-h)",
             height: "var(--nav-h)",
-            background: "var(--base, #000)",
+            background: "var(--base, #fff)",
           }}
         >
           <span
             className="hamburger-line w-4 h-0.5 rounded origin-center transition-all duration-[10ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
-            // style={{ background: "var(--pill-bg, #fff)" }}
+            style={{ background: "var(--pill-bg, #fff)" }}
           />
           <span
             className="hamburger-line w-4 h-0.5 rounded origin-center transition-all duration-[10ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
-            // style={{ background: "var(--pill-bg, #fff)" }}
+            style={{ background: "var(--pill-bg, #fff)" }}
           />
         </button>
       </nav>

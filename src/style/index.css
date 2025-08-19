@@ -37,6 +37,17 @@ html.en {
   background: rgba(73, 73, 73, 0.7);
   box-shadow: red;
 }
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.scrollbar-hide ::-webkit-scrollbar {
+  display: none;
+}
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
 .jodit-toolbar-editor-collection {
   width: 100% !important;
   display: flex !important;

@@ -22,7 +22,7 @@ export const FAQ: FC = () => {
             {i18n.language === "fa" ? element.content_fa : element.content_en}
           </p>
         ),
-        className: "bg-[#FDFDFD] !border !border-[#E9E9E9] !mb-8 !rounded-lg !pb-2",
+        className: "bg-[#FDFDFD] !border !border-[#E9E9E9] !mb-8 !rounded-lg flex items-center",
       }));
 
       setDataCollapse(collapseItems);
@@ -31,9 +31,9 @@ export const FAQ: FC = () => {
 
   return (
     !isEmpty(data) && (
-      <div className="py-20 relative">
-        <div className="flex flex-col justify-center items-center gap-2 w-5/12 m-auto mb-20 relative z-10">
-          <div className="flex justify-center bg-] px-2 py-2 rounded-lg gap-2 mt-8 bg-[#FDFDFD] border-1 border-[#E9E9E9] my-8">
+      <div className="py-20 relative px-10 sm:px-0">
+        <div className="flex flex-col justify-center items-center gap-2 sm:w-5/12 w-full m-auto sm:mb-20 mb-10 relative z-10">
+          <div className="flex justify-center px-2 py-2 rounded-lg gap-2 mt-8 bg-[#FDFDFD] border-1 border-[#E9E9E9] my-8">
             <IconlyStar color="#0065FD" />
             <span className="text-[#0065FD]">
               {t("landing.faq.askTalkino")}
@@ -41,17 +41,16 @@ export const FAQ: FC = () => {
             <IconlyStar color="#0065FD" />
           </div>
 
-          <div className="flex flex-col items-center gap-2 w-6/12">
+          <div className="flex flex-col items-center gap-2 sm:w-6/12 w-full">
             <Typography.Title level={1} className="text-center !leading-16">
               {t("landing.faq.frequentlyAskedQuestions")}
             </Typography.Title>
           </div>
         </div>
 
-        <div className="w-6/12 flex flex-col items-end gap-2 m-auto relative z-10 pb-2">
+        <div className="sm:w-6/12 w-full flex flex-col items-end gap-2 m-auto relative z-10 pb-2">
           <Collapse
             bordered={false}
-            defaultActiveKey={["1"]}
             items={dataCollapse}
             className="w-full !bg-transparent"
           />

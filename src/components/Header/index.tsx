@@ -55,20 +55,20 @@ export const Header: FC = () => {
       mixBlendMode="color"
       className="w-full sticky top-0 z-20 shadow-none"
     >
-      <div className="flex justify-between items-center h-20 px-4 rounded-t-lg w-full">
+      <div className="flex justify-between items-center sm:h-20 px-4 rounded-t-lg w-full">
         <div className="w-4/12 h-full flex items-center">
           <Link
             to="/"
             className="flex items-center space-x-2 !text-gray-400 gap-2"
           >
             <img src={Logo} alt="tabora" className="h-8 w-8" />
-            Talkino
+           <span className="sm:visible hidden">Talkino</span>
           </Link>
         </div>
 
         <Nav />
 
-        <div className="flex h-full items-center gap-2 w-4/12">
+        <div className="flex h-full items-center sm:gap-2 sm:w-4/12">
           <Select
             className="w-28"
             variant="borderless"
