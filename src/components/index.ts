@@ -7,3 +7,4 @@ export * from "./icon";
 export * from "./Nav";
 export * from "./Container";
 export * from './LottieAnimation'
+export * from './PriceCard'

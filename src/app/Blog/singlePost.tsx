@@ -3,6 +3,7 @@ import { useGetOnePost } from "@/core";
 import { getConvertDate } from "@/helper";
 import i18n from "@/i18n";
 import { Divider, Typography } from "antd";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 
@@ -10,6 +11,13 @@ const SinglePost = () => {
   const { id } = useParams();
   const { data } = useGetOnePost(id as string);
   const {t} = useTranslation()
+
+
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
+
+
   return (
     <div className="flex flex-col w-10/12 m-auto mt-20">
       <div>

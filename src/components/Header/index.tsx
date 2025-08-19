@@ -1,6 +1,6 @@
 import { useAuth } from "@/hooks";
-import { Avatar, Button, Select } from "antd";
-import { use, useEffect, useState, type FC } from "react";
+import { Button, Select } from "antd";
+import { useEffect, useState, type FC } from "react";
 import { Link } from "react-router-dom";
 import GlassSurface from "../Animation/GlassSurface";
 import { Nav } from "../Nav";

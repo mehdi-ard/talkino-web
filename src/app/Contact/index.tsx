@@ -1,7 +1,7 @@
 import { word } from "@/enums/badWords";
 import type { ContactUs, Social } from "@/types";
 import { Button, Col, Form, Input, Row, Typography } from "antd";
-import { useRef, type FC } from "react";
+import { useEffect, useRef, type FC } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import Cover from "@/assets/image/Cover.png";
 import { Link } from "react-router-dom";
@@ -16,6 +16,12 @@ const Contact: FC = () => {
   const { t } = useTranslation();
   const playerMailRef = useRef<LottieAnimationHandle | null>(null);
   const playerPhoneRef = useRef<LottieAnimationHandle | null>(null);
+
+
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
+
 
   //   const { mutate, isPending } = useContactUs();
   const { data } = useGetSocial();

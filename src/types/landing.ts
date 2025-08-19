@@ -1,4 +1,3 @@
-
 export interface Plan {
   id: number;
   title_fa: string;
@@ -10,8 +9,16 @@ export interface Plan {
   isRecommended: boolean;
 }
 
+export interface PriceCardData {
+  title: string;
+  price: string;
+  content: string;
+  isRecommended: boolean;
+  id: number;
+}
+
 export interface FAQ {
-  id:number,
+  id: number;
   name_fa: string;
   content_fa: string;
   name_en: string;
@@ -35,7 +42,6 @@ export interface Testimonial {
   position_en: string;
   image: string;
 }
-
 
 export interface Download {
   id: number;

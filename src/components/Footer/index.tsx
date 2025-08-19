@@ -1,18 +1,27 @@
 import { useGetSocial } from "@/core";
-import type { Social } from "@/types/landing";
+import { getCurrentYear } from "@/helper";
+import type { Social } from "@/types";
 import type { FC } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 export const Footer: FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { data } = useGetSocial();
 
   return (
-    <div className="px-20 bg-[#2B2B2B] py-3">
+    <footer className="px-20 bg-[#2B2B2B] py-3">
       <div className="flex justify-between">
         <div>
           <span className="text-neutral-500 text-sm">
-            {t("layout.footer.copyright")}
+            <Trans
+              i18nKey="layout.footer.copyright"
+              values={{ year: getCurrentYear(i18n.language) }}
+              components={{
+                span: (
+                  <span className="text-neutral-500 font-bold" />
+                ),
+              }}
+            />
           </span>
         </div>
         <div>
@@ -21,9 +30,7 @@ export const Footer: FC = () => {
               <li>
                 <a href={item.link}>
                   <img
-                    src={
-                      import.meta.env.VITE_APP_API_URL + "/" + item.iconDark
-                    }
+                    src={import.meta.env.VITE_APP_API_URL + "/" + item.iconDark}
                     alt={item.socialMedia}
                   />
                 </a>
@@ -38,6 +45,6 @@ export const Footer: FC = () => {
           {t("layout.footer.copyrightContent")}
         </span>
       </div>
-    </div>
+    </footer>
   );
 };

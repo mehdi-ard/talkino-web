@@ -22,7 +22,7 @@ export const FAQ: FC = () => {
             {i18n.language === "fa" ? element.content_fa : element.content_en}
           </p>
         ),
-        className: "bg-[#FDFDFD] border border-[#E9E9E9] mb-8 !rounded-lg",
+        className: "bg-[#FDFDFD] !border !border-[#E9E9E9] !mb-8 !rounded-lg !pb-2",
       }));
 
       setDataCollapse(collapseItems);
@@ -48,7 +48,7 @@ export const FAQ: FC = () => {
           </div>
         </div>
 
-        <div className="w-6/12 flex flex-col items-end gap-2 m-auto relative z-10">
+        <div className="w-6/12 flex flex-col items-end gap-2 m-auto relative z-10 pb-2">
           <Collapse
             bordered={false}
             defaultActiveKey={["1"]}
@@ -57,7 +57,7 @@ export const FAQ: FC = () => {
           />
         </div>
 
-        <div className="absolute top-0 right-0 z-0 w-full h-full">
+        <div className="absolute top-0 right-0 z-0 w-full h-full flex justify-center">
           <Particles
             particleColors={["#E9E9E9", "#E9E9E9"]}
             particleCount={600}

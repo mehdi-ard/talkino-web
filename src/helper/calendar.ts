@@ -65,7 +65,7 @@ export const getDate = (
   return dayjs().calendar(calender).locale(locale).format(format);
 };
 
-export const convertToJalali = (date?: string | number | Dayjs) => {
+export const convertToJalaliLast = (date?: string | number | Dayjs) => {
   const now = dayjs();
   const startOfWeek = now.startOf("week");
   const endOfWeek = now.endOf("week");
@@ -149,3 +149,8 @@ export const getConvertDate = (
     .locale(lng)
     .format(format ?? "YYYY/MM/DD");
 };
+
+
+export const getYear = (lng: string) => {
+  return dayjs().calendar(lng === "fa" ? "jalali" : "gregory").year();
+}

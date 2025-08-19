@@ -1,4 +1,4 @@
-import { type FC } from "react";
+import { useEffect, type FC } from "react";
 import { Link } from "react-router-dom";
 import { useGetPosts } from "@/core";
 import type { Post } from "@/types";
@@ -11,6 +11,11 @@ import { isEmpty } from "ramda";
 const Blog: FC = () => {
   const { t } = useTranslation();
   const { data } = useGetPosts();
+
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
+
   return (
     <div className="p-20 flex flex-wrap gap-2">
       {isEmpty(data) ? (

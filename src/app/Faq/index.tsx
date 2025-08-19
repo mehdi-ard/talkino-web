@@ -1,4 +1,3 @@
-import { IconlyStar } from "@/components";
 import Particles from "@/components/Animation/Particles";
 import { useGetFaq } from "@/core";
 import i18n from "@/i18n";
@@ -12,6 +11,10 @@ const FAQ: FC = () => {
   const { data } = useGetFaq();
   const [dataCollapse, setDataCollapse] = useState<CollapseProps["items"]>([]);
 
+  useEffect(()=>{
+      window.scrollTo(0, 0);
+  },[])
+  
   useEffect(() => {
     if (data) {
       const collapseItems: CollapseProps["items"] = data.map((element) => ({
@@ -60,6 +63,7 @@ const FAQ: FC = () => {
             moveParticlesOnHover={true}
             alphaParticles={false}
             disableRotation={false}
+            className="!h-full"
           />
         </div>
       </div>

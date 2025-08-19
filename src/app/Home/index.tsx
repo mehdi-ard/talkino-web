@@ -1,8 +1,13 @@
-import i18n from "@/i18n";
-import type { FC } from "react";
+import { useEffect, type FC } from "react";
 import * as Component from "./Components";
 
 const Home: FC = () => {
+
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
+
+
   return (
     <div>
       <Component.Hero />

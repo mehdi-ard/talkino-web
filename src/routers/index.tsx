@@ -7,6 +7,7 @@ const ContactPage = lazy(() => import("@/app/Contact"));
 const FaqPage = lazy(() => import("@/app/Faq"));
 const BlogPage = lazy(() => import("@/app/Blog"));
 const SinglePost = lazy(() => import("@/app/Blog/singlePost"));
+const PricePage = lazy(() => import("@/app/Pricing"));
 
 const router: RouteObject[] = [
   {
@@ -28,6 +29,10 @@ const router: RouteObject[] = [
   {
     path: "/blog/:id/:slug",
     element: <SinglePost />,
+  },
+    {
+    path: "/pricing",
+    element: <PricePage />,
   },
   {
     path: "/:slug",
