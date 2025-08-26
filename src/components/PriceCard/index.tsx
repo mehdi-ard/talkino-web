@@ -22,7 +22,7 @@ export const PriceCard: FC<PriceCardProps> = (props) => {
       <div className="absolute top-0 left-0 h-full w-full">
         <DotGrid
           dotSize={2}
-          gap={10}
+          gap={11}
           baseColor="#f5f5f5"
           activeColor="#d4d4d4"
           proximity={120}

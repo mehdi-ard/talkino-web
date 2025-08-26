@@ -1,16 +1,17 @@
-import { DotGrid, IconlyDollar, IconlyRial, IconlyStar, PriceCard } from "@/components";
+import { IconlyStar, PriceCard } from "@/components";
 import { useGetPlans } from "@/core";
 import i18n from "@/i18n";
 import type { Plan as PlanType } from "@/types/landing";
-import { Button, Typography } from "antd";
+import { Typography } from "antd";
 import { type FC } from "react";
 import { useTranslation } from "react-i18next";
-import cn from "classnames";
 import { isEmpty } from "ramda";
+import { useNavigate } from "react-router-dom";
 
 export const Plan: FC = () => {
   const { t } = useTranslation();
   const { data } = useGetPlans();
+  const navigate = useNavigate();
 
   return (
     !isEmpty(data) && (
@@ -33,15 +34,22 @@ export const Plan: FC = () => {
 
         <div className="flex sm:justify-center items-end gap-4 m-auto relative z-10 sm:overflow-visible overflow-x-auto scrollbar-hide smooth-scroll">
           {data?.map((item: PlanType) => (
-            <PriceCard key={item.id} data={{
+            <PriceCard
+              key={item.id}
+              data={{
                 title: i18n.language === "fa" ? item.title_fa : item.title_en,
                 price: i18n.language === "fa" ? item.price_fa : item.price_en,
-                content: i18n.language === "fa" ? item.content_fa : item.content_en,
+                content:
+                  i18n.language === "fa" ? item.content_fa : item.content_en,
                 isRecommended: item.isRecommended,
-                id: item.id
-            }}
-            lang={i18n.language}
-            onClick={() => console.log('clicked')}
+                id: item.id,
+              }}
+              lang={i18n.language}
+              onClick={() =>
+                window.open(
+                  `${import.meta.env.VITE_APP_URL}/subscription/${item.id}`
+                )
+              }
             />
           ))}
         </div>

@@ -23,7 +23,7 @@ export const Hero: FC = () => {
        <div className="sm:w-7/12 w-full relative"> 
         <div className="mt-20 flex flex-col items-center gap-2 ">
           <BlurText
-            text="Meet. Talk. Chat. Down."
+            text="Meet. Talk. Chat. Done."
             delay={200}
             animateBy="words"
             direction="top"

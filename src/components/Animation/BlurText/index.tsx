@@ -48,7 +48,6 @@ export const BlurText: React.FC<BlurTextProps> = ({
   stepDuration = 0.35,
 }) => {
   const elements = animateBy === "words" ? text.split(" ") : text.split("");
-  console.log(elements);
   
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLParagraphElement>(null);

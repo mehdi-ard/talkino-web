@@ -20,39 +20,20 @@ export const Nav: FC = () => {
       label: t("layout.header.contact"),
       href: "/contact",
     },
-    {
-      label: t("layout.header.blog"),
-      href: "/blog",
-    },
+    // {
+    //   label: t("layout.header.blog"),
+    //   href: "/blog",
+    // },
     {
       label: t("layout.header.faq"),
       href: "/faq",
     },
-    {
-      label: t("layout.header.pricing"),
-      href: "/pricing",
-    },
+    // {
+    //   label: t("layout.header.pricing"),
+    //   href: "/pricing",
+    // },
   ];
   return (
-    // <ul className="flex gap-8 w-full justify-center">
-    //   {menuItems.map((item, index) => (
-    //     <li key={index}>
-    //       <NavLink
-    //         to={item?.href}
-    //         className={({ isActive, isPending }) =>
-    //           isPending
-    //             ? "!text-gray-400 hover:text-primary"
-    //             : isActive
-    //             ? "!text-gray-500 border-b border-b-neutral-500 py-2"
-    //             : "!text-gray-800 hover:!text-gray-300 transition-all py-2"
-    //         }
-    //       >
-    //         {item.label}
-    //       </NavLink>
-    //     </li>
-    //   ))}
-    // </ul>
-
     <div className="flex gap-8 sm:w-full w-0.5 justify-center c">
       <PillNav
         logoAlt="Company Logo"
