@@ -18,7 +18,7 @@ export const Header: FC = () => {
   }, []);
 
   const handelGoToMeet = () => {
-    window.location.href = "https://meet.talkino.app";
+    window.location.href = "https://app.talkino.app";
   };
 
   const langList = [
