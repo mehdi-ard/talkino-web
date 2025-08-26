@@ -1,0 +1,8 @@
+services:
+  talkino-web:
+    container_name: talkino-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
