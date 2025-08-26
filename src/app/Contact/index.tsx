@@ -3,7 +3,7 @@ import type { ContactUs, Social } from "@/types";
 import { Button, Col, Form, Input, Row, Typography } from "antd";
 import { useEffect, useRef, type FC } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import Cover from "@/assets/image/Cover.png";
+import Cover from "@/assets/image/cover.png";
 import { Link } from "react-router-dom";
 import { useGetSocial } from "@/core";
 import { LottieAnimation, type LottieAnimationHandle } from "@/components";
