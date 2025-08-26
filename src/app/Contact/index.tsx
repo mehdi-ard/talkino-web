@@ -28,6 +28,8 @@ const Contact: FC = () => {
 
   const handelSubmit = (model: ContactUs) => {
     // mutate(model);
+    console.log(model);
+    
   };
 
   const allBadWords = [...word.mild, ...word.strong, ...word.very_strong];

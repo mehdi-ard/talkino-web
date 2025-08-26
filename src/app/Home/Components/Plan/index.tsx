@@ -6,12 +6,10 @@ import { Typography } from "antd";
 import { type FC } from "react";
 import { useTranslation } from "react-i18next";
 import { isEmpty } from "ramda";
-import { useNavigate } from "react-router-dom";
 
 export const Plan: FC = () => {
   const { t } = useTranslation();
   const { data } = useGetPlans();
-  const navigate = useNavigate();
 
   return (
     !isEmpty(data) && (

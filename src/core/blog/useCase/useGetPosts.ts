@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
 import { PostsService } from '../repository';
-import type { Post } from 'ogl';
 
 
 export const useGetPosts = () => {

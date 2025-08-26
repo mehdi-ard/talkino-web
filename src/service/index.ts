@@ -1,5 +1,5 @@
 import { notification } from 'antd';
-import axios, { AxiosHeaders, type AxiosInstance } from 'axios';
+import axios, { type AxiosInstance } from 'axios';
 import { pathOr } from 'ramda';
 
 

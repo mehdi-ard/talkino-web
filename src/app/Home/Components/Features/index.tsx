@@ -1,7 +1,3 @@
-import Artboard from "@/assets/image/Artboard.png";
-import Chat from "@/assets/image/Chat.png";
-import Reminder from "@/assets/image/Container.png";
-import PrivateMeeting from "@/assets/image/Join Meeting.png";
 import { IconlyStar } from "@/components";
 import Threads from "@/components/Animation/Threads";
 import { useGetFeature } from "@/core";
@@ -14,30 +10,30 @@ import { useTranslation } from "react-i18next";
 export const Features: FC = () => {
   const { t } = useTranslation();
   const { data } = useGetFeature();
-  const dataFeatures = [
-    {
-      title: "Chat",
-      description: "Send messages, share files, and chat in meetings.",
-      image: Chat,
-    },
-    {
-      title: "Artboard",
-      description:
-        "Draw ideas together using real-time collaborative whiteboard.",
-      image: Artboard,
-    },
+  // const dataFeatures = [
+  //   {
+  //     title: "Chat",
+  //     description: "Send messages, share files, and chat in meetings.",
+  //     image: Chat,
+  //   },
+  //   {
+  //     title: "Artboard",
+  //     description:
+  //       "Draw ideas together using real-time collaborative whiteboard.",
+  //     image: Artboard,
+  //   },
 
-    {
-      title: "Reminder",
-      description: "Set up a new meeting and get your meeting link",
-      image: Reminder,
-    },
-    {
-      title: "Private Meeting",
-      description: "Set up a new meeting and get your meeting link",
-      image: PrivateMeeting,
-    },
-  ];
+  //   {
+  //     title: "Reminder",
+  //     description: "Set up a new meeting and get your meeting link",
+  //     image: Reminder,
+  //   },
+  //   {
+  //     title: "Private Meeting",
+  //     description: "Set up a new meeting and get your meeting link",
+  //     image: PrivateMeeting,
+  //   },
+  // ];
   return (
     <section className="flex sm:flex-row flex-col relative bg-[#2B2B2B] px-4 my-10 rounded-md justify-between">
       <div className="w-full h-full absolute top-0 left-0 z-0">

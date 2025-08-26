@@ -1,4 +1,3 @@
-import i18n from "@/i18n";
 import { motion, type Transition } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 
