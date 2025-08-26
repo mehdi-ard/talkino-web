@@ -20,7 +20,7 @@ RUN yarn build
 
 # Serve the built React app with a static server
 RUN npm install -g serve
-CMD ["serve", "-s", "dist"]
+CMD ["serve", "-s", "dist", "-l", "4000"]
 
 # Expose the app port
 EXPOSE 4000
