@@ -30,7 +30,7 @@ export const Footer: FC = () => {
               <li>
                 <a href={item.link}>
                   <img
-                    src={import.meta.env.VITE_APP_API_URL + "/" + item.iconDark}
+                    src={import.meta.env.VITE_APP_API_URL + "/" + item.iconLight}
                     alt={item.socialMedia}
                   />
                 </a>

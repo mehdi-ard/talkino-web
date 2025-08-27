@@ -168,7 +168,7 @@ const Contact: FC = () => {
         </div>
 
         <div
-          className="flex flex-col items-center justify-center gap-2 bg-neutral-200 sm:w-4/12 w-full h-40 rounded-lg"
+          className="flex flex-col sm:flex-row items-center justify-center gap-2 bg-neutral-200 sm:w-4/12 w-full h-40 rounded-lg"
           onMouseEnter={() => playerPhoneRef.current?.play()}
           onMouseLeave={() => playerPhoneRef.current?.stop()}
         >
@@ -189,7 +189,7 @@ const Contact: FC = () => {
         </div>
 
         <div
-          className="flex flex-col items-center justify-center gap-2 bg-neutral-200 sm:w-4/12 w-full h-40 rounded-lg"
+          className="flex items-center justify-center gap-2 bg-neutral-200 sm:w-4/12 w-full h-40 rounded-lg"
         >
         {
             data?.map((item: Social) => (
@@ -200,7 +200,7 @@ const Contact: FC = () => {
               >
                 <img
                   src={
-                    import.meta.env.VITE_APP_API_URL + "/" + item.iconLight
+                    import.meta.env.VITE_APP_API_URL + "/" + item.iconDark
                   }
                   className="w-10 h-10"
                   alt={item.socialMedia}
