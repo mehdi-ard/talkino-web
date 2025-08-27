@@ -145,7 +145,7 @@ const Contact: FC = () => {
         </Form>
       </div>
 
-      <div className="flex flex-col sm:flex-col items-center justify-center gap-3 w-full mt-20">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full mt-20">
         <div
           className="flex flex-col items-center justify-center gap-2 bg-neutral-200 sm:w-4/12 w-full h-40 rounded-lg"
           onMouseEnter={() => playerMailRef.current?.play()}
@@ -181,10 +181,10 @@ const Contact: FC = () => {
             />
           </div>
           <a
-            href="tel:+989123456789"
+            href="tel:+989362214466"
             className="text-neutral-500 hover:text-neutral-300 text-md"
           >
-            (+98) 91 23456789
+            (+98) 936 221 44 66
           </a>
         </div>
 
