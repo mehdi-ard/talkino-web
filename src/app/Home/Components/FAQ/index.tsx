@@ -22,7 +22,7 @@ export const FAQ: FC = () => {
             {i18n.language === "fa" ? element.content_fa : element.content_en}
           </p>
         ),
-        className: "bg-[#FDFDFD] !border !border-[#E9E9E9] !mb-8 !rounded-lg flex items-center",
+        className: "bg-[#FDFDFD] !border !border-[#E9E9E9] !mb-8 !rounded-lg",
       }));
 
       setDataCollapse(collapseItems);
