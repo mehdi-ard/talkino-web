@@ -1,0 +1,17 @@
+services:
+  talkino-web:
+    container_name: talkino-web
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      HOSTNAME: 0.0.0.0
+    networks:
+      - talkino-network
+
+networks:
+  talkino-network:
+    external: true
