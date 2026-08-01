@@ -1,9 +1,0 @@
-@import "tailwindcss";
-@import "@fontsource-variable/estedad";
-
-:root { color-scheme: light; }
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: "Estedad Variable", Estedad, system-ui, sans-serif; background: #faf9ff; }
-* { box-sizing: border-box; }
-a { transition: color .2s ease, background-color .2s ease, transform .2s ease; }
-::selection { background: #bfdbfe; color: #172554; }
