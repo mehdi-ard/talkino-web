@@ -1,19 +1,4 @@
-{"timestamp":"00:00:03.581","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:09.556","source":"Server","level":"WARN","message":"⚠ Blocked cross-origin request to Next.js dev resource /_next/webpack-hmr from \"172.27.200.24\".\nCross-origin access to Next.js dev resources is blocked by default for safety.\n\nTo allow this host in development, add it to \"allowedDevOrigins\" in next.config.js and restart the dev server:\n\n// next.config.js\nmodule.exports = {\n  allowedDevOrigins: ['172.27.200.24'],\n}\n\nRead more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins"}
-{"timestamp":"00:04:00.086","source":"Server","level":"LOG","message":"✓ Compiled in 128ms"}
-{"timestamp":"00:04:02.588","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
-{"timestamp":"00:04:35.372","source":"Server","level":"LOG","message":"✓ Compiled in 21ms"}
-{"timestamp":"00:06:20.460","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
-{"timestamp":"00:06:33.714","source":"Server","level":"LOG","message":"✓ Compiled in 17ms"}
-{"timestamp":"00:06:55.436","source":"Server","level":"LOG","message":"✓ Compiled in 30ms"}
-{"timestamp":"00:07:00.322","source":"Server","level":"LOG","message":"✓ Compiled in 18ms"}
-{"timestamp":"00:07:06.695","source":"Server","level":"LOG","message":"✓ Compiled in 45ms"}
-{"timestamp":"00:07:18.941","source":"Server","level":"LOG","message":"✓ Compiled in 17ms"}
-{"timestamp":"00:07:30.950","source":"Server","level":"LOG","message":"✓ Compiled in 49ms"}
-{"timestamp":"00:08:08.090","source":"Server","level":"LOG","message":"✓ Compiled in 24ms"}
-{"timestamp":"00:08:18.245","source":"Server","level":"LOG","message":"✓ Compiled in 34ms"}
-{"timestamp":"00:08:21.455","source":"Server","level":"LOG","message":"✓ Compiled in 32ms"}
-{"timestamp":"00:08:25.819","source":"Server","level":"LOG","message":"✓ Compiled in 48ms"}
-{"timestamp":"00:08:47.149","source":"Server","level":"LOG","message":"✓ Compiled in 35ms"}
-{"timestamp":"00:08:54.609","source":"Server","level":"LOG","message":"✓ Compiled in 23ms"}
-{"timestamp":"00:09:00.935","source":"Server","level":"LOG","message":"✓ Compiled in 19ms"}
+{"timestamp":"00:00:00.963","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:01.870","source":"Server","level":"WARN","message":"⚠ Blocked cross-origin request to Next.js dev resource /_next/webpack-hmr from \"172.27.200.24\".\nCross-origin access to Next.js dev resources is blocked by default for safety.\n\nTo allow this host in development, add it to \"allowedDevOrigins\" in next.config.js and restart the dev server:\n\n// next.config.js\nmodule.exports = {\n  allowedDevOrigins: ['172.27.200.24'],\n}\n\nRead more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins"}
+{"timestamp":"00:00:06.392","source":"Server","level":"LOG","message":"✓ Compiled in 38ms"}
+{"timestamp":"00:01:29.245","source":"Server","level":"LOG","message":"✓ Compiled in 25ms"}

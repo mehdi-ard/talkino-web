@@ -25,7 +25,6 @@ export const features = [
 ];
 
 export const comparison = [
-  ["AI-First Summaries", "Standard", "Add-on", "Manual"],
   ["End-to-End Encryption", "Standard", "Enterprise Only", "Limited"],
   ["Integrated Whiteboard", "Built-in", "External App", "External App"],
   ["Global Latency", "< 30ms", "~ 120ms", "~ 200ms"],

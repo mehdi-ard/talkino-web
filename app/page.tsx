@@ -16,7 +16,7 @@ export default function Home() {
     <main className="overflow-hidden bg-[#faf9ff] text-slate-950">
       <Header />
       <Hero />
-      <TrustedTeams />
+      {/* <TrustedTeams /> */}
       <Features />
       <MessagingShowcase />
       <MeetingShowcase />
