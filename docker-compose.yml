@@ -2,13 +2,15 @@ services:
   talkino-web:
     container_name: talkino-web
     build:
-      context: ./
+      context: .
       dockerfile: Dockerfile
     restart: unless-stopped
     environment:
       NODE_ENV: production
       PORT: 3000
       HOSTNAME: 0.0.0.0
+    ports:
+      - "127.0.0.1:3000:3000"
     networks:
       - talkino-network
 
