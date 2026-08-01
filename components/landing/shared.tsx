@@ -1,8 +1,27 @@
+import Image from "next/image";
+import LogoImage from '@/public/Logo.svg'
+
 export const features = [
-  ["Secure Messaging", "Real-time conversations across every device, with end-to-end encryption by default.", "▣"],
-  ["Organized Channels", "Keep projects and conversations in focused, topic-based channels.", "⌘"],
-  ["Video Meetings", "High-quality video with integrated recording and transcription.", "▱"],
-  ["Team Whiteboard", "A shared canvas for brainstorming, product planning, and system architecture.", "✎"],
+  [
+    "Secure Messaging",
+    "Real-time conversations across every device, with end-to-end encryption by default.",
+    "▣",
+  ],
+  [
+    "Organized Channels",
+    "Keep projects and conversations in focused, topic-based channels.",
+    "⌘",
+  ],
+  [
+    "Video Meetings",
+    "High-quality video with integrated recording and transcription.",
+    "▱",
+  ],
+  [
+    "Team Whiteboard",
+    "A shared canvas for brainstorming, product planning, and system architecture.",
+    "✎",
+  ],
 ];
 
 export const comparison = [
@@ -13,5 +32,12 @@ export const comparison = [
 ];
 
 export function Logo() {
-  return <a href="#" className="flex items-center gap-2 font-extrabold text-slate-950"><span className="grid size-7 place-items-center rounded-lg bg-blue-600 text-xs text-white">T</span><span>Talkino</span></a>;
+  return (
+    <a
+      href="#"
+      className="flex items-center gap-2 font-extrabold text-slate-950 h-full w-32"
+    >
+      <Image src={LogoImage} alt="Talkino" className=" place-items-center rounded-lg h-full w-full text-xs text-white"/>
+    </a>
+  );
 }
