@@ -1,74 +1,19 @@
-import { Logo } from "./shared";
+import { navigation } from "./data";
+import { Brand } from "./shared";
 
-const links = [
-  ["Features", "#features"],
-  ["Solutions", "#solutions"],
-  ["Pricing", "#compare"],
-  // ["Docs", "#"],
-  // ["Blog", "#"],
-];
+function NavLinks() {
+  return <>{navigation.map(({ label, href }) => <a href={href} key={href}>{label}</a>)}</>;
+}
 
 export function Header() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 h-16 border-b border-slate-200/70 bg-[#faf9ff]/85 backdrop-blur-xl">
-      <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Logo />
-        <nav className="hidden items-center gap-6 text-sm text-slate-600 md:flex lg:gap-8">
-          {links.map(([label, href], index) => (
-            <a
-              key={label}
-              className={
-                index === 0
-                  ? "border-b-2 border-blue-600 py-5 font-semibold text-blue-700"
-                  : "hover:text-blue-700"
-              }
-              href={href}
-            >
-              {label}
-            </a>
-          ))}
-        </nav>
-        <div className="hidden items-center gap-2 text-sm sm:flex">
-          <a href="#">Sign in</a>
-          <a
-            className="rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white shadow-sm"
-            href="#cta"
-          >
-            Download
-          </a>
-          <a
-            className="hidden rounded-lg border border-slate-200 px-4 py-2 lg:block"
-            href="#"
-          >
-            Enterprise
-          </a>
-        </div>
-        <details className="relative sm:hidden">
-          <summary
-            aria-label="Open navigation"
-            className="grid size-10 cursor-pointer list-none place-items-center rounded-lg border border-slate-200 bg-white text-xl"
-          >
-            ☰
-          </summary>
-          <nav className="absolute right-0 top-12 flex w-48 flex-col rounded-xl border border-slate-200 bg-white p-2 text-sm shadow-xl">
-            {links.map(([label, href]) => (
-              <a
-                className="rounded-lg px-3 py-2.5 hover:bg-blue-50 hover:text-blue-700"
-                href={href}
-                key={label}
-              >
-                {label}
-              </a>
-            ))}
-            <a
-              className="mt-1 rounded-lg bg-blue-600 px-3 py-2.5 text-center font-bold text-white"
-              href="#cta"
-            >
-              Download
-            </a>
-          </nav>
-        </details>
-      </div>
+    <header className="nav-wrap">
+      <nav className="nav shell" aria-label="Main navigation">
+        <a className="brand" href="#top" aria-label="Talkino home"><Brand priority /></a>
+        <div className="nav-links"><NavLinks /></div>
+        <div className="nav-actions"><a className="sign-in" href="#">Sign in</a><a className="button small" href="#start">Get Talkino <span>↗</span></a></div>
+        <details className="mobile-menu"><summary aria-label="Open menu">Menu</summary><div><NavLinks /><a href="#start">Get started</a></div></details>
+      </nav>
     </header>
   );
 }

@@ -1,3 +1,13 @@
-const tools = [["Summarize", "Catch up on everything you missed in seconds."], ["Action Items", "Automatically detect and assign tasks from chat."], ["Drafting", "Write professional replies in your unique voice."]];
+import { Kicker } from "./shared";
 
-export function AiSection() { return <section className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20"><div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-[#08090a] px-5 py-14 text-center text-white sm:rounded-[2rem] sm:px-10 sm:py-16 md:px-16 lg:py-20"><div className="absolute left-1/2 top-0 h-40 w-96 max-w-full -translate-x-1/2 rounded-full bg-cyan-500/10 blur-3xl"/><div className="relative mx-auto max-w-2xl"><span className="rounded-full border border-cyan-400/30 px-3 py-1 text-[10px] font-bold text-cyan-400 shadow-[0_0_24px_rgba(34,211,238,.2)] sm:text-xs">TALKINO AI CORE</span><h2 className="mt-5 text-3xl font-black leading-tight sm:mt-6 sm:text-4xl">AI that works for you, not against you.</h2><p className="mt-4 text-sm leading-7 text-slate-400 sm:mt-5 sm:text-base">Stop digging through old messages. Turn hours of conversation into clear decisions and actionable tasks in minutes.</p><div className="mt-8 grid gap-3 text-left sm:mt-10 sm:grid-cols-3 sm:gap-4">{tools.map(([title, copy]) => <div key={title} className="rounded-xl border border-white/10 bg-white/5 p-5"><b className="text-cyan-400">{title}</b><p className="mt-2 text-xs leading-5 text-slate-400">{copy}</p></div>)}</div></div></div></section>; }
+const stats = [["12 hrs", "saved per person / month"], ["4.8×", "faster team catch-up"], ["92%", "less time searching"]];
+
+export function AiSection() {
+  return (
+    <section className="ai-section shell" id="ai"><div className="ai-card">
+      <div className="ai-orb">✦</div><Kicker cyan>TALKINO AI</Kicker><h2>Catch up in seconds.<br /><em>Move forward with clarity.</em></h2><p>Talkino AI understands the conversations around your work. It finds the signal, captures decisions, and gives your team time back.</p>
+      <div className="prompt"><span>✦</span><div><small>ASK TALKINO</small><b>What did I miss in #product-launch?</b></div><kbd>↵</kbd></div>
+      <div className="ai-stats">{stats.map(([value, label]) => <span key={value}><b>{value}</b><small>{label}</small></span>)}</div>
+    </div></section>
+  );
+}

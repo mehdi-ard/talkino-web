@@ -1,5 +1,24 @@
-import { features } from "./shared";
+import { benefits, features } from "./data";
+import { Icon, Kicker } from "./shared";
 
-export function TrustedTeams() { return <section className="border-y border-slate-200/70 bg-white/40 py-10 sm:py-12"><div className="mx-auto max-w-7xl px-4 sm:px-6"><p className="mb-7 text-center text-[10px] font-bold tracking-[.15em] text-slate-400 sm:mb-8 sm:text-xs sm:tracking-[.2em]">TRUSTED BY HIGH-PERFORMANCE TEAMS WORLDWIDE</p><div className="grid grid-cols-2 gap-5 text-center text-sm font-bold tracking-wide text-slate-400 sm:grid-cols-3 sm:text-lg lg:grid-cols-6"><span>APPLE</span><span>VERCEL</span><span>STRIPE</span><span>LINEAR</span><span>RAILWAY</span><span>CLERK</span></div></div></section>; }
+export function TrustedTeams() {
+  return <section className="trust shell"><p>Trusted by focused teams at</p><div>{["Vertex", "Northstar", "Layers", "Metric", "Forma", "Craftwork"].map(team => <b key={team}>{team}</b>)}</div></section>;
+}
 
-export function Features() { return <section id="features" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"><div className="text-center"><h2 className="text-2xl font-black sm:text-3xl">Engineered for focus.</h2><p className="mx-auto mt-3 max-w-2xl text-sm text-slate-500 sm:text-base">Everything you need to move faster, together. No noise, just productivity.</p></div><div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">{features.map(([title, copy, icon]) => <article key={title} className="group rounded-2xl border border-slate-200/70 bg-white/75 p-6 shadow-[0_5px_20px_rgba(15,23,42,.03)] backdrop-blur transition hover:-translate-y-1 hover:shadow-xl sm:p-7"><span className="text-2xl text-blue-600">{icon}</span><h3 className="mt-6 text-lg font-bold sm:mt-8">{title}</h3><p className="mt-2 text-sm leading-6 text-slate-500">{copy}</p></article>)}</div></section>; }
+export function FeaturesSection() {
+  return (
+    <section className="section shell" id="features">
+      <div className="section-heading"><div><Kicker>EVERYTHING IN ONE PLACE</Kicker><h2>Less noise.<br />More momentum.</h2></div><p>Talkino brings your team&apos;s communication into one thoughtfully designed workspace, so everyone can focus on the work that matters.</p></div>
+      <div className="feature-grid">{features.map((item, index) => <article className={`feature-card feature-${index + 1}`} key={item.title}><Icon>{item.icon}</Icon><h3>{item.title}</h3><p>{item.text}</p><a href="#solutions" aria-label={`Learn more about ${item.title}`}>Explore feature <span>→</span></a></article>)}</div>
+    </section>
+  );
+}
+
+export function BenefitsSection() {
+  return (
+    <section className="section shell" id="pricing">
+      <div className="section-heading compact"><div><Kicker>BUILT DIFFERENT</Kicker><h2>Made for modern work.</h2></div><p>Thoughtful by default. Powerful when you need it. Secure at every layer.</p></div>
+      <div className="mini-grid">{benefits.map(item => <article key={item.title}><Icon>{item.icon}</Icon><h3>{item.title}</h3><p>{item.text}</p></article>)}</div>
+    </section>
+  );
+}

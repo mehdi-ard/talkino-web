@@ -1,6 +1,6 @@
 export { AiSection } from "./AiSection";
-export { Comparison, FinalCta, Footer } from "./BottomSections";
-export { Features, TrustedTeams } from "./Features";
+export { FinalCta, Footer } from "./BottomSections";
+export { BenefitsSection, FeaturesSection, TrustedTeams } from "./Features";
 export { Header } from "./Header";
 export { Hero } from "./Hero";
-export { MeetingShowcase, MessagingShowcase } from "./Showcases";
+export { ConversationSection } from "./Showcases";
