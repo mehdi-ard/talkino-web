@@ -9,10 +9,24 @@ import {
   Hero,
   TrustedTeams,
 } from "@/components/landing";
+import { LanguageProvider, type Locale } from "@/components/landing/i18n";
+import { cookies, headers } from "next/headers";
 
-export default function Home() {
+async function getInitialLocale(): Promise<Locale> {
+  const savedLocale = (await cookies()).get("talkino-locale")?.value;
+  if (savedLocale === "fa" || savedLocale === "en") return savedLocale;
+
+  const requestHeaders = await headers();
+  const country = requestHeaders.get("x-vercel-ip-country")
+    ?? requestHeaders.get("cf-ipcountry")
+    ?? requestHeaders.get("x-country-code");
+  return country?.toUpperCase() === "IR" ? "fa" : "en";
+}
+
+export default async function Home() {
+  const initialLocale = await getInitialLocale();
   return (
-    <main>
+    <LanguageProvider initialLocale={initialLocale}><main>
       <Header />
       <Hero />
       <TrustedTeams />
@@ -22,6 +36,6 @@ export default function Home() {
       <BenefitsSection />
       <FinalCta />
       <Footer />
-    </main>
+    </main></LanguageProvider>
   );
 }

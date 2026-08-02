@@ -1,25 +1,29 @@
+"use client";
+
 import Image from "next/image";
 import { Icon } from "./shared";
+import { useLanguage } from "./i18n";
 
 function ProductPreview() {
+  const { locale, dictionary: t } = useLanguage();
   return (
     <div className="product-stage">
-      <div className="float-card float-left">
+      <div className={`float-card float-left ${locale === "fa" ? "!text-right" : ""}`}>
         <Icon>✓</Icon>
         <span>
-          <b>Launch plan approved</b>
-          <small>Product · just now</small>
+          <b>{t.hero.approved}</b>
+          <small>{t.hero.approvedMeta}</small>
         </span>
       </div>
-      <div className="float-card float-right">
+      <div className={`float-card float-right ${locale === "fa" ? "!text-right" : ""}`}>
         <span className="avatars">
           <i>MK</i>
           <i>AR</i>
           <i>+8</i>
         </span>
         <span>
-          <b>Design sync</b>
-          <small>Live now</small>
+          <b>{t.hero.sync}</b>
+          <small>{t.hero.live}</small>
         </span>
       </div>
       <div className="product-window">
@@ -30,11 +34,11 @@ function ProductPreview() {
             <i />
           </div>
           <span>talkino.app / workspace</span>
-          <div className="secure">● Secure</div>
+          <div className="secure">● {t.hero.secure}</div>
         </div>
         <Image
           src="/images/image.png"
-          alt="Talkino team workspace showing organized conversations"
+          alt={t.hero.imageAlt}
           width={1024}
           height={768}
           sizes="(max-width: 900px) 94vw, 1080px"
@@ -46,30 +50,30 @@ function ProductPreview() {
 }
 
 export function Hero() {
+  const { locale, dictionary: t } = useLanguage();
   return (
     <section className="hero shell" id="top">
       <div className="hero-glow" />
       <div className="eyebrow">
-        <span className="status-dot" /> Built for teams in motion <span>→</span>
+        <span className="status-dot" /> {t.hero.eyebrow} <span>→</span>
       </div>
-      <h1>
-        Where great teams
+      <h1 className={locale === "fa" ? "!tracking-[-.025em]" : ""}>
+        {t.hero.title}
         <br />
-        <span>find their flow.</span>
+        <span>{t.hero.titleAccent}</span>
       </h1>
       <p className="hero-copy">
-        One calm, intelligent space for conversations, meetings, and the work
-        that happens between them.
+        {t.hero.copy}
       </p>
       <div className="hero-actions">
         <a className="button" href="#start">
-          Start for free <span>↗</span>
+          {t.hero.start} <span>↗</span>
         </a>
         <a className="button ghost" href="#solutions">
-          <i>▶</i> See how it works
+          <i>▶</i> {t.hero.demo}
         </a>
       </div>
-      <p className="microcopy">Free for teams up to 10 · No credit card</p>
+      <p className="microcopy">{t.hero.microcopy}</p>
       <ProductPreview />
     </section>
   );
